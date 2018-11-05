@@ -329,4 +329,43 @@ public class TestCase {
 		assertTrue(TestPage.confirmation("Maximum invalid value for minutes 60"));
 	}
 
+	@Test
+	public void minInvValueMin() {
+		driver.get(Constants.url);
+		test=reports.startTest("NETbuilder Challenges-6 Test Report");
+
+		TestPage tp=PageFactory.initElements(driver, TestPage.class);
+		tp.inputField("01/01/2017 00:-1");
+		
+		   if (TestPage.confirmation("Minimum invalid value for minutes: -1")) {
+	        	test.log(LogStatus.PASS, "\"01/01/2017 00:-1\" is an invalid boundary");
+	        	test.log(LogStatus.PASS, "Minimum invalid value for minutes: -1");
+	        }
+	        else {
+	        	test.log(LogStatus.FAIL, "\"01/01/2017 00:-1\" is a valid boundary");
+	        }
+		
+		assertTrue(TestPage.confirmation("Minimum invalid value for minutes: -1"));
+	}
+	
+	@Test
+	public void hourSmaller() {
+		driver.get(Constants.url);
+		test=reports.startTest("NETbuilder Challenges-6 Test Report");
+
+		TestPage tp=PageFactory.initElements(driver, TestPage.class);
+		tp.inputField("31/12/2017 -1:59");
+		
+		   if (TestPage.confirmation("Hour smaller than minimum value: -1")) {
+	        	test.log(LogStatus.PASS, "\"31/12/2017 -1:59\" is an invalid boundary");
+	        	test.log(LogStatus.PASS, "Hour smaller than minimum value: -1");
+	        }
+	        else {
+	        	test.log(LogStatus.FAIL, "\"31/12/2017 -1:59\" is a valid boundary");
+	        }
+		
+		assertTrue(TestPage.confirmation("Hour smaller than minimum value: -1"));
+	}
+	
+	
 }
