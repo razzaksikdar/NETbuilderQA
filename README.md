@@ -8,7 +8,7 @@ To run the project in windows environment, we have to change
 System.setProperty("webdriver.chrome.driver", "/Users/ARSIKDAR/Desktop/NETbuilder/BypassValidation/chromedriver"); to  System.setProperty("webdriver.chrome.driver", "/Users/ARSIKDAR/Desktop/NETbuilder/BypassValidation/chromedriver.exe"); in each project (Line No: 29, TestCase.java).
 That means, instead of chromedriver, it should be chromedriver.exe. 
 
-Best Regards
-RAZZAK SIKDAR
-IT Consultant
+Best Regards:
+RAZZAK SIKDAR *
+IT Consultant *
 QA Consulting
