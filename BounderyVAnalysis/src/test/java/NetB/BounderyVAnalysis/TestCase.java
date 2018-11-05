@@ -25,7 +25,7 @@ public class TestCase {
 	    @Before
 	    public void setup()
 	    {
-	        System.setProperty("webdriver.chrome.driver", "/Users/ARSIKDAR/Desktop/chromedriver");
+	        System.setProperty("webdriver.chrome.driver", "/Users/ARSIKDAR/Desktop/NETbuilder/BounderyVAnalysis/chromedriver");
 	        driver = new ChromeDriver();
 	     // driver.manage().window().maximize();
 	    }
